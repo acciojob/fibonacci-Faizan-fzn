@@ -1,12 +1,17 @@
 function fibonacci(num) {
 // your code here
-	let a = 0, b = 1, c = a + b;
-	for(let i = 0; i < num.length; i++){
-		c = a + b;
-		a = b;
-		b = c;
+	if(num <= 0){
+		return "invalid input"
 	}
-	return c;
+	elseif(num == 1){
+		return 0
+	} 
+	elseif(num == 2){
+		return 1
+	}
+	else{
+		return (num - 1) + (num - 2)
+	}
 }
 
 module.exports = fibonacci;
